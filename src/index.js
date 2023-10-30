@@ -61,7 +61,19 @@ list.prepend(35);
 list.append(45);
 list.prepend(10);
 console.log(list.toString());
-list.pop();
+console.log(list.pop());
+console.log(list.toString());
+console.log(list.pop());
+console.log(list.toString());
+console.log(list.pop());
+console.log(list.toString());
+console.log(list.pop());
+console.log(list.toString());
+console.log(list.pop());
+console.log(list.toString());
+console.log(list.pop());
+console.log(list.toString());
+console.log(list.pop());
 console.log(list.toString());
 
 

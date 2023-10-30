@@ -64,7 +64,8 @@ export default class LinkedList {
 
   pop() {
     let tempNode = this.HEAD;
-    if (tempNode === null) return;
+    const poppedElement = this.TAIL;
+    if (tempNode === null) return null;
     if (tempNode === this.TAIL) {
       this.HEAD = null;
       this.TAIL = null;
@@ -74,6 +75,7 @@ export default class LinkedList {
     }
     tempNode.next = null;
     this.TAIL = tempNode;
+    return poppedElement;
   }
 
   toString() {
