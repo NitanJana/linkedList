@@ -6,12 +6,16 @@ export default class LinkedList {
     this.TAIL = null;
   }
 
+  #handleEmptyList(newNode) {
+    this.HEAD = newNode;
+    this.TAIL = newNode;
+  }
+
   append(value) {
     const newNode = new Node(value);
 
     if (this.HEAD === null) {
-      this.HEAD = newNode;
-      this.TAIL = newNode;
+      this.#handleEmptyList(newNode);
     } else {
       this.TAIL.next = newNode;
       this.TAIL = newNode;
@@ -22,8 +26,7 @@ export default class LinkedList {
     const newNode = new Node(value);
 
     if (this.HEAD === null) {
-      this.HEAD = newNode;
-      this.TAIL = newNode;
+      this.#handleEmptyList(newNode);
     } else {
       newNode.next = this.HEAD;
       this.HEAD = newNode;
