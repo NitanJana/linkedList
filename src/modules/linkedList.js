@@ -113,12 +113,12 @@ export default class LinkedList {
     if (index < 1) {
       this.prepend(value);
       return;
-    } 
+    }
     const newNode = new Node(value);
     let currentNode = this.HEAD;
     let currentIndex = 0;
     while (currentNode !== this.TAIL) {
-      if (currentIndex+1 === index) {
+      if (currentIndex + 1 === index) {
         newNode.next = currentNode.next;
         currentNode.next = newNode;
         return;
@@ -127,5 +127,34 @@ export default class LinkedList {
       currentNode = currentNode.next;
     }
     this.append(value);
+  }
+
+  removeAt(index) {
+    if (this.HEAD === null) {
+      return null;
+    }
+    if (this.HEAD === this.TAIL) {
+      const poppedElement = this.HEAD;
+      this.HEAD = null;
+      this.TAIL = null;
+      return poppedElement;
+    }
+    if (index < 1) {
+      const poppedElement = this.HEAD;
+      this.HEAD = this.HEAD.next;
+      return poppedElement;
+    }
+    let currentNode = this.HEAD;
+    let currentIndex = 0;
+    while (currentNode.next !== this.TAIL) {
+      if (currentIndex + 1 === index) {
+        const poppedElement = currentNode.next;
+        currentNode.next = currentNode.next.next;
+        return poppedElement;
+      }
+      currentIndex += 1;
+      currentNode = currentNode.next;
+    }
+    return this.pop();
   }
 }
