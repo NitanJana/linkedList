@@ -78,6 +78,15 @@ export default class LinkedList {
     return poppedElement;
   }
 
+  contains(value) {
+    let tempNode = this.HEAD;
+    while (tempNode !== null) {
+      if (tempNode.data === value) return true;
+      tempNode = tempNode.next;
+    }
+    return false;
+  }
+
   toString() {
     let tempNode = this.HEAD;
     let outputString = "";

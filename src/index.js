@@ -61,19 +61,9 @@ list.prepend(35);
 list.append(45);
 list.prepend(10);
 console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
-console.log(list.pop());
-console.log(list.toString());
+console.log(list.contains(45));
+console.log(list.contains(15));
+console.log(list.contains(0));
+console.log(list.contains(10000));
 
 
