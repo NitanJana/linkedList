@@ -25,16 +25,48 @@ const list = new LinkedList();
 // list.prepend(20);
 // console.log(list.head());
 
-console.log(list.toString());
+// console.log(list.toString());
+// list.append(15);
+// console.log(list.toString());
+// list.append(25);
+// console.log(list.toString());
+// list.prepend(20);
+// console.log(list.toString());
+// list.prepend(35);
+// console.log(list.toString());
+// list.append(45);
+// console.log(list.toString());
+// list.prepend(10);
+// console.log(list.toString());
+
+// console.log(list.tail());
+// list.append(15);
+// console.log(list.tail());
+// list.append(25);
+// console.log(list.tail());
+// list.prepend(20);
+// console.log(list.tail());
+// list.prepend(35);
+// console.log(list.tail());
+// list.append(45);
+// console.log(list.tail());
+// list.prepend(10);
+// console.log(list.tail());
+
+
 list.append(15);
-console.log(list.toString());
 list.append(25);
-console.log(list.toString());
 list.prepend(20);
-console.log(list.toString());
 list.prepend(35);
-console.log(list.toString());
 list.append(45);
-console.log(list.toString());
 list.prepend(10);
 console.log(list.toString());
+
+console.log(list.at(0));
+console.log(list.at(1));
+console.log(list.at(2));
+console.log(list.at(3));
+console.log(list.at(4));
+console.log(list.at(5));
+console.log(list.at(6));
+console.log(list.at(-1));

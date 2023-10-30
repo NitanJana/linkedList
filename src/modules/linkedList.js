@@ -51,6 +51,17 @@ export default class LinkedList {
     return this.TAIL;
   }
 
+  at(index) {
+    let tempNode = this.HEAD;
+    let currentIndex = 0;
+    while (tempNode !== null) {
+      if (currentIndex === index) break;
+      currentIndex += 1;
+      tempNode = tempNode.next;
+    }
+    return tempNode;
+  }
+
   toString() {
     let tempNode = this.HEAD;
     let outputString = "";
