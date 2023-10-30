@@ -87,6 +87,17 @@ export default class LinkedList {
     return false;
   }
 
+  find(value) {
+    let tempNode = this.HEAD;
+    let currentIndex = 0;
+    while (tempNode !== null) {
+      if (tempNode.data === value) return currentIndex;
+      currentIndex += 1;
+      tempNode = tempNode.next;
+    }
+    return null;
+  }
+
   toString() {
     let tempNode = this.HEAD;
     let outputString = "";
