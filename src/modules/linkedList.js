@@ -62,6 +62,20 @@ export default class LinkedList {
     return tempNode;
   }
 
+  pop() {
+    let tempNode = this.HEAD;
+    if (tempNode === null) return;
+    if (tempNode === this.TAIL) {
+      this.HEAD = null;
+      this.TAIL = null;
+    }
+    while (tempNode.next !== this.TAIL) {
+      tempNode = tempNode.next;
+    }
+    tempNode.next = null;
+    this.TAIL = tempNode;
+  }
+
   toString() {
     let tempNode = this.HEAD;
     let outputString = "";

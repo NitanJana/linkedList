@@ -61,12 +61,7 @@ list.prepend(35);
 list.append(45);
 list.prepend(10);
 console.log(list.toString());
+list.pop();
+console.log(list.toString());
 
-console.log(list.at(0));
-console.log(list.at(1));
-console.log(list.at(2));
-console.log(list.at(3));
-console.log(list.at(4));
-console.log(list.at(5));
-console.log(list.at(6));
-console.log(list.at(-1));
+
