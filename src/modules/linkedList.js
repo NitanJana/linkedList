@@ -108,4 +108,24 @@ export default class LinkedList {
     outputString += "null";
     return outputString;
   }
+
+  insertAt(value, index) {
+    if (index < 1) {
+      this.prepend(value);
+      return;
+    } 
+    const newNode = new Node(value);
+    let currentNode = this.HEAD;
+    let currentIndex = 0;
+    while (currentNode !== this.TAIL) {
+      if (currentIndex+1 === index) {
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return;
+      }
+      currentIndex += 1;
+      currentNode = currentNode.next;
+    }
+    this.append(value);
+  }
 }
