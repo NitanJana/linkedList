@@ -47,6 +47,10 @@ export default class LinkedList {
     return this.HEAD;
   }
 
+  tail() {
+    return this.TAIL;
+  }
+
   toString() {
     let tempNode = this.HEAD;
     let outputString = "";
