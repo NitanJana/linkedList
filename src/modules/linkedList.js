@@ -3,6 +3,7 @@ import Node from "./node.js";
 export default class LinkedList {
   constructor() {
     this.HEAD = null;
+    this.TAIL = null;
   }
 
   append(value) {
@@ -10,10 +11,10 @@ export default class LinkedList {
 
     if (this.HEAD === null) {
       this.HEAD = newNode;
+      this.TAIL = newNode;
     } else {
-      let tempNode = this.HEAD;
-      while (tempNode.next !== null) tempNode = tempNode.next;
-      tempNode.next = newNode;
+      this.TAIL.next = newNode;
+      this.TAIL = newNode;
     }
   }
 
@@ -22,6 +23,7 @@ export default class LinkedList {
 
     if (this.HEAD === null) {
       this.HEAD = newNode;
+      this.TAIL = newNode;
     } else {
       newNode.next = this.HEAD;
       this.HEAD = newNode;
